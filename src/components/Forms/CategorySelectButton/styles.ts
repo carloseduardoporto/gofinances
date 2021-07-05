@@ -2,10 +2,9 @@ import styled from 'styled-components/native';
 
 import { Feather } from '@expo/vector-icons';
 import { RFValue } from 'react-native-responsive-fontsize';
+import { TouchableOpacity } from 'react-native';
  
-export const Container = styled.TouchableOpacity.attrs({
-    activeOpacity: 0.7
-})`
+export const Container = styled(TouchableOpacity)`
     background-color: ${({ theme }) => theme.colors.shapes};
     flex-direction: row;
     justify-content: space-between;
@@ -19,8 +18,6 @@ export const Container = styled.TouchableOpacity.attrs({
 export const Category = styled.Text`
     font-family: ${({ theme }) => theme.fonts.regular};
     font-size: ${RFValue(14)}px;
-
-    
 `;
 
 export const Icon = styled(Feather)`
